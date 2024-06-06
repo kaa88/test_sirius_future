@@ -1,0 +1,49 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  position: relative;
+}
+.link,
+.link:visited,
+.link:active {
+  padding-left: 44px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  background-color: transparent;
+  border-radius: 0 $border-radius $border-radius 0;
+  transition: background-color $timer-hover, color $timer-hover,
+    fill $timer-hover;
+  &.active {
+    color: var(--color-text-light);
+    background-color: var(--color-accent-01);
+    pointer-events: none;
+  }
+  &:focus-visible {
+    color: var(--color-accent-05);
+  }
+  @media (hover: hover) {
+    &:not(.active):hover {
+      color: var(--color-accent-05);
+    }
+  }
+}
+.icon {
+  margin-right: 8px;
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: width $timer-hover, height $timer-hover;
+    .active & {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+.title {
+  white-space: nowrap;
+  .active & {
+    font-weight: 700;
+  }
+}

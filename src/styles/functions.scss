@@ -1,0 +1,22 @@
+@use "sass:math";
+
+@function trim-units($number) {
+  // Converts '10px' into '10'
+  @return math.div($number, ($number * 0 + 1));
+}
+
+@function resize-multiplier($size, $media, $multiplier: 1, $base: 100vw) {
+  $sz: trim-units($size);
+  $md: trim-units($media);
+  @return calc($sz * $multiplier / $md * $base + $sz * (1 - $multiplier) * 1px);
+}
+
+@function _em-handler($value, $context) {
+  @return math.div(trim-units($value), trim-units($context));
+}
+@function em($value, $context: 16) {
+  @return _em-handler($value, $context) * 1em;
+}
+@function rem($value, $context: 16) {
+  @return _em-handler($value, $context) * 1rem;
+}

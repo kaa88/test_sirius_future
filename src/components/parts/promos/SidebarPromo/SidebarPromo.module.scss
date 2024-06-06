@@ -1,0 +1,28 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  position: relative;
+  padding: 16px 38px 10px 16px;
+  border-radius: $border-radius-s;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+.title {
+  line-height: 1.2;
+}
+.text {
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.2;
+}
+.button {
+  margin-top: 10px;
+}
+.image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 64px;
+  max-height: 50%;
+}

@@ -1,0 +1,39 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  background-color: var(--color-background);
+  --sidebar-margin-top: 24px;
+  --sidebar-padding-horizontal: 20px;
+}
+.container {
+  // margin-left: 50px;
+  margin-top: var(--sidebar-margin-top);
+  height: calc(100% - var(--sidebar-margin-top));
+  overflow: hidden;
+  border-radius: $border-radius;
+  background-color: var(--color-background-02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 44px;
+  padding-bottom: 24px;
+}
+.logo {
+  margin: 0 var(--sidebar-padding-horizontal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  flex-grow: 1;
+  margin: 40px 0;
+  padding-right: var(--sidebar-padding-horizontal);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.footer {
+  width: 100%;
+  padding: 0 var(--sidebar-padding-horizontal);
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Circe Rounded";
+  font-display: swap;
+  src: local("Circe Rounded"),
+    url("../assets/fonts/CirceRounded-Light.woff2") format("woff2"),
+    url("../assets/fonts/CirceRounded-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe Rounded";
+  font-display: swap;
+  src: local("Circe Rounded"),
+    url("../assets/fonts/CirceRounded-Regular.woff2") format("woff2"),
+    url("../assets/fonts/CirceRounded-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe Rounded";
+  font-display: swap;
+  src: local("Circe Rounded"),
+    url("../assets/fonts/CirceRounded-Bold.woff2") format("woff2"),
+    url("../assets/fonts/CirceRounded-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  --font-main: "Circe Rounded", Arial, sans-serif;
+}

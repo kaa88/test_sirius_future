@@ -1,0 +1,84 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  position: relative;
+  @include text-max-lines(2);
+
+  // Sizes
+  // default
+  font-size: 16px;
+  height: em(40);
+  line-height: 1.2;
+  padding: 0 em(10);
+  border-radius: 50px;
+
+  &.small {
+    font-size: 12px;
+    height: em(32, 12);
+    padding: 0 em(16, 12);
+  }
+  &.large {
+    height: em(48);
+  }
+
+  // Colors
+  // default
+  --btn-color: var(--color-text);
+  --btn-color-hover: var(--color-text);
+  --btn-color-disabled: var(--color-lightgray);
+
+  --btn-bg: transparent;
+  --btn-bg-hover: transparent;
+  --btn-bg-disabled: var(--color-background-03);
+
+  --btn-border-color: transparent;
+  --btn-border-color-hover: transparent;
+  --btn-border-color-disabled: var(--color-lightgray);
+
+  --btn-focus: var(--color-focus);
+
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: solid em(1) var(--btn-border-color);
+  transition: background-color $timer-hover, color $timer-hover,
+    border-color $timer-hover, opacity $timer-hover;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &:active,
+  &.active {
+    opacity: 0.7;
+  }
+  &:focus-visible {
+    @include focus(var(--btn-focus));
+  }
+  &:disabled,
+  &.disabled {
+    background-color: var(--btn-bg-disabled);
+    color: var(--btn-color-disabled);
+    border-color: var(--btn-border-color-disabled);
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  &.default {
+    --btn-bg: var(--color-accent-03);
+  }
+  &.dark {
+    --btn-bg: var(--color-accent-01);
+    --btn-color: var(--color-text-light);
+  }
+  &.light {
+    --btn-bg: var(--color-white);
+    --btn-border-color: var(--color-accent-01);
+  }
+  &.green {
+    --btn-bg: var(--color-accent-06);
+  }
+  &.dashed {
+    --btn-border-color: var(--color-text);
+    border-style: dashed;
+  }
+}
