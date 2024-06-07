@@ -1,0 +1,59 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  position: relative;
+}
+.wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.pointer {
+  position: absolute;
+  top: 6px;
+  left: -8px;
+  svg {
+    width: 16px;
+    height: 8px;
+    color: var(--color-borders);
+  }
+}
+.container {
+  background-color: var(--color-white);
+  border: solid 1px var(--color-borders);
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 0;
+  min-width: 250px;
+}
+.pointer,
+.container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $timer-popup, visibility $timer-popup;
+  .active & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-borders);
+  background-color: transparent;
+  svg {
+    width: 40%;
+    height: 40%;
+  }
+}

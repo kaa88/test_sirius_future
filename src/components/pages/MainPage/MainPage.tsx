@@ -14,7 +14,7 @@ export const MainPage = ({
   return (
     <div className={cn([className, styles._])} {...props}>
       Main page
-      <img src={logo} alt="logo" style={{ width: "1000px" }} />
+      {/* <img src={logo} alt="logo" style={{ width: "1000px" }} /> */}
       <p>{text}</p>
       <p>{text}</p>
     </div>

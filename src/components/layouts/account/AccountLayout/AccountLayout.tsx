@@ -15,7 +15,7 @@ export const AccountLayout = ({
   return (
     <div className={cn([className, styles._])} {...props}>
       <AccountHeader className={styles.header} />
-      <AccountSidebar className={styles.sidebar} />
+      {/* <AccountSidebar className={styles.sidebar} /> */}
       <main className={styles.main}>
         <div className={styles.content}>{children || <Outlet />}</div>
       </main>

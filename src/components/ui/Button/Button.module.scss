@@ -10,7 +10,7 @@
   height: em(40);
   line-height: 1.2;
   padding: 0 em(10);
-  border-radius: 50px;
+  border-radius: $border-radius;
 
   &.small {
     font-size: 12px;

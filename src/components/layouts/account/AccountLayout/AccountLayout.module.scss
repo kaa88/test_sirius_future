@@ -1,6 +1,12 @@
 @import "/src/styles/variables.scss";
 
 ._ {
+  --container-width: 1072px;
+  --container-padding-left: 32px;
+  --container-padding-right: 50px;
+  --container-padding-top: 20px;
+  --container-padding-bottom: 0px;
+
   position: relative;
   background-color: var(--color-background);
   min-height: 100vh;
@@ -15,6 +21,8 @@
   top: 0;
   left: 0;
   z-index: $z-index-header;
+  padding: 0 var(--container-padding-right) 0 var(--container-padding-left);
+  height: 68px;
 }
 .sidebar {
   grid-row: 1 / span 2;
@@ -29,7 +37,9 @@
 .main {
   grid-row: 2;
   grid-column: 2;
-  padding: 20px 50px 0 32px;
+  // padding: 20px 50px 0 32px;
+  padding: var(--container-padding-top) var(--container-padding-right)
+    var(--container-padding-bottom) var(--container-padding-left);
 }
 .content {
   position: relative;

@@ -1,0 +1,129 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  & > * {
+    flex-shrink: 0;
+  }
+}
+.buttonImage {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--color-borders);
+  border-radius: 50%;
+  svg {
+    width: 70%;
+    height: 70%;
+  }
+}
+.dropIcon {
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 5px;
+  color: var(--color-borders);
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+body .popupWrapper {
+  left: calc(50% - 7px);
+}
+
+.content {
+}
+.title {
+  font-size: 16px;
+}
+.userList {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--color-background-02);
+}
+.user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color $timer-hover;
+  &.active {
+    background-color: var(--color-background-02);
+  }
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+.userPhoto {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.userInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userName {
+  font-size: 12px;
+}
+.currentUser {
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: left;
+  display: none;
+  .active & {
+    display: block;
+  }
+}
+.quitButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > * {
+    color: var(--color-link);
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
