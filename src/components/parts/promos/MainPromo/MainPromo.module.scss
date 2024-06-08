@@ -1,4 +1,30 @@
 @import "/src/styles/variables.scss";
 
 ._ {
+  position: relative;
+  padding: 8px 180px 10px 40px;
+  border-radius: $border-radius-l;
+  overflow: hidden;
+  color: var(--color-text-light);
+  background-color: var(--color-accent-02);
+  height: 248px;
+  text-align: left;
+}
+.title {
+  display: block;
+  font-size: 32px;
+  line-height: 1;
+}
+.text {
+  margin-top: 12px;
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+.image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
 }

@@ -6,11 +6,10 @@
   --sidebar-padding-horizontal: 20px;
 }
 .container {
-  // margin-left: 50px;
   margin-top: var(--sidebar-margin-top);
   height: calc(100% - var(--sidebar-margin-top));
   overflow: hidden;
-  border-radius: $border-radius;
+  border-radius: $border-radius-l;
   background-color: var(--color-background-02);
   display: flex;
   flex-direction: column;
@@ -32,6 +31,26 @@
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
+  @media (hover: hover) {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-accent-03);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 10px;
+    }
+  }
+  @-moz-document url-prefix() {
+    @media (hover: hover) {
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-accent-03) transparent;
+    }
+  }
 }
 .footer {
   width: 100%;

@@ -4,9 +4,6 @@
 
 // transitions
 $timer-hover: 0.15s;
-$timer-sidebar: 0.2s;
-$timer-menu: 0.2s;
-$timer-modal: 0.2s;
 $timer-popup: 0.2s;
 $timer-dropdown: $timer-popup;
 
@@ -14,21 +11,9 @@ $timer-dropdown: $timer-popup;
 $z-index-popup: 100;
 $z-index-header: 200;
 $z-index-sidebar: 300;
-$z-index-menu: 400;
-$z-index-modal: 500;
-
-// sizes
-// $container-desktop-width: 1240;
-// $container-mobile-width: 480;
-// $container-padding: 10;
-// $container-width: $container-padding * 2 + $container-base-width;
-// $mobile-content-max-width: $media-m + $media-offset + px;
 
 // border radius
-$border-radius: 30px;
+$border-radius-l: 30px;
+$border-radius-m: 20px;
 $border-radius-s: 15px;
-
-// gradients
-
-// other
-// $scrollbar-margin: 2px;
+$border-radius-ss: 12px;

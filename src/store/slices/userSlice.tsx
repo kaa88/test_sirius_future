@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { IUser } from "../../models/models";
-import { users } from "../../api/fakeApiData";
+import { IUser } from "../../models/user";
+import { users } from "../../api/user";
 
 interface IState {
   users: IUser[];

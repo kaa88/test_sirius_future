@@ -10,7 +10,7 @@
   height: em(40);
   line-height: 1.2;
   padding: 0 em(10);
-  border-radius: $border-radius;
+  border-radius: $border-radius-l;
 
   &.small {
     font-size: 12px;
@@ -25,15 +25,15 @@
   // default
   --btn-color: var(--color-text);
   --btn-color-hover: var(--color-text);
-  --btn-color-disabled: var(--color-lightgray);
+  --btn-color-disabled: var(--color-text);
 
   --btn-bg: transparent;
   --btn-bg-hover: transparent;
-  --btn-bg-disabled: var(--color-background-03);
+  --btn-bg-disabled: var(--color-white);
 
   --btn-border-color: transparent;
   --btn-border-color-hover: transparent;
-  --btn-border-color-disabled: var(--color-lightgray);
+  --btn-border-color-disabled: var(--color-background-02);
 
   --btn-focus: var(--color-focus);
 

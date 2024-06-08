@@ -1,7 +1,10 @@
 @import "/src/styles/variables.scss";
 
 ._ {
+  margin-top: 50px;
 }
 .text {
   text-align: center;
+  font-size: 50px;
+  color: var(--color-accent-01);
 }

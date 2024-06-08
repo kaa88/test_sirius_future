@@ -1,0 +1,84 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  background-color: var(--color-white);
+  border-radius: $border-radius-l;
+  border: solid 1px var(--color-borders);
+  padding: 24px 3px 30px 28px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.title {
+  font-size: 24px;
+  width: calc(100% - 24px);
+}
+.list {
+  flex-grow: 1;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding-right: 20px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-background-02);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  @-moz-document url-prefix() {
+    padding-right: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-background-02) transparent;
+  }
+}
+.item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  &:not(:last-child) {
+    margin-bottom: 7px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 3px);
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-background-02);
+    }
+  }
+}
+.itemName {
+  font-size: 16px;
+  @include text-max-lines(2);
+  margin-right: 16px;
+}
+.itemCount {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--color-background-02);
+  border-radius: 50%;
+}
+.buttonWrapper {
+  flex-shrink: 0;
+  width: 100%;
+  padding-right: 24px;
+}
+.button {
+  width: 100%;
+  max-width: 344px;
+  margin: 0 auto;
+}

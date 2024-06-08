@@ -31,13 +31,14 @@
   top: 0;
   left: 0;
   z-index: $z-index-sidebar;
-  width: 236px;
+  width: 236px + 50px;
   height: 100vh;
+  max-height: 728px;
+  padding-left: 50px;
 }
 .main {
   grid-row: 2;
   grid-column: 2;
-  // padding: 20px 50px 0 32px;
   padding: var(--container-padding-top) var(--container-padding-right)
     var(--container-padding-bottom) var(--container-padding-left);
 }

@@ -1,4 +1,4 @@
-[Ссылка на готовую версию](https://ya.ru)
+[Ссылка на готовую версию](https://test-sirius-future.vercel.app/)
 
 Запуск локально: `$ npm i && npm start`
 

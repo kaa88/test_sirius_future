@@ -76,7 +76,7 @@ body .popupWrapper {
   align-items: center;
   width: 100%;
   padding: 8px;
-  border-radius: 12px;
+  border-radius: $border-radius-ss;
   background-color: transparent;
   transition: background-color $timer-hover;
   &.active {

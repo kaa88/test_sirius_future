@@ -1,0 +1,28 @@
+@import "/src/styles/variables.scss";
+
+.input {
+  font-size: 12px;
+  padding: 0 em(12, 12);
+  width: 100%;
+  height: em(36, 12);
+  border: solid em(1, 12) #ececec;
+  border-radius: em(8, 12);
+  background-color: var(--color-white);
+  transition: background-color $timer-hover, border-color $timer-hover,
+    color $timer-hover;
+  color: var(--color-midgray);
+  &.error {
+    border-color: var(--color-attention);
+  }
+  &::placeholder {
+    color: var(--color-midgray);
+    transition: color $timer-hover;
+  }
+  &:disabled {
+    background-color: var(--color-lightgray);
+    color: #ececec;
+    &::placeholder {
+      color: #ececec;
+    }
+  }
+}

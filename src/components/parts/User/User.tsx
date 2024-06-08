@@ -71,7 +71,7 @@ export const User = ({ className, ...props }: UserProps): JSX.Element => {
 
       <Link
         className={styles.quitButton}
-        to={PAGES.LOGIN}
+        to={PAGES.ROOT}
         onClick={() => dispatch(setActiveUser(null))}
       >
         <span>Выход</span>

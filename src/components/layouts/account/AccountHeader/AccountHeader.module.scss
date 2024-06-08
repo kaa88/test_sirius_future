@@ -6,11 +6,12 @@
 }
 
 ._ {
+  margin-right: 8px;
   background-color: var(--color-background);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 $border-radius-m $border-radius-m;
   border-bottom: solid 1px #f6f6fe;
   box-shadow: 0 27px 11px 0 shadow(0.01), 0 15px 9px 0 shadow(0.04),
     0 7px 7px 0 shadow(0.06), 0 2px 4px 0 shadow(0.07);

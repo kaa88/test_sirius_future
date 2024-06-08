@@ -9,6 +9,7 @@
   left: 50%;
   width: 0;
   height: 0;
+  z-index: $z-index-popup;
 }
 .pointer {
   position: absolute;
@@ -25,10 +26,10 @@
   border: solid 1px var(--color-borders);
   padding: 30px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: $border-radius-ss;
   position: absolute;
   top: calc(100% + 13px);
-  left: 0;
+  left: calc(50% - 125px);
   min-width: 250px;
 }
 .pointer,

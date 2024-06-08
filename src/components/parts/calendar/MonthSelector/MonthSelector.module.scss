@@ -1,0 +1,33 @@
+@import "/src/styles/variables.scss";
+
+._ {
+  display: flex;
+  align-items: center;
+}
+.text {
+  margin: 0 5px;
+  min-width: 110px;
+  text-align: center;
+  font-weight: 700;
+}
+.prevBtn,
+.nextBtn {
+  width: 24px;
+  height: 24px;
+  color: var(--color-midgray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  svg {
+    width: 70%;
+    height: 70%;
+  }
+}
+.prevBtn {
+}
+.nextBtn {
+  svg {
+    transform: rotate(180deg);
+  }
+}

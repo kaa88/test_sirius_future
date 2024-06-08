@@ -12,7 +12,7 @@
   align-items: center;
   color: var(--color-text);
   background-color: transparent;
-  border-radius: 0 $border-radius $border-radius 0;
+  border-radius: 0 $border-radius-l $border-radius-l 0;
   transition: background-color $timer-hover, color $timer-hover,
     fill $timer-hover;
   &.active {

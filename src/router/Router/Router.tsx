@@ -6,6 +6,8 @@ import { AccountLayout } from "../../components/layouts/account/AccountLayout/Ac
 import { ErrorPage } from "../../components/pages/ErrorPage/ErrorPage";
 import { MainPage } from "../../components/pages/MainPage/MainPage";
 import { SchedulePage } from "../../components/pages/SchedulePage/SchedulePage";
+import { AuthLayout } from "../../components/layouts/auth/AuthLayout/AuthLayout";
+import { LoginPage } from "../../components/pages/LoginPage/LoginPage";
 
 export const Router = () => {
   const router = createBrowserRouter(
@@ -23,19 +25,15 @@ export const Router = () => {
       {
         element: <PageTitle />,
         children: [
-          // {
-          //   element: <AuthLayout />,
-          //   children: [
-          //     {
-          //       path: PAGES.LOGIN,
-          //       element: <LoginPage />,
-          //     },
-          //     {
-          //       path: PAGES.REGISTER,
-          //       element: <RegisterPage />,
-          //     },
-          //   ],
-          // },
+          {
+            element: <AuthLayout />,
+            children: [
+              {
+                path: PAGES.ROOT,
+                element: <LoginPage />,
+              },
+            ],
+          },
 
           {
             element: <AccountLayout />,
